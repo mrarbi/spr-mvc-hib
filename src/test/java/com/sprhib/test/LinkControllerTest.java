@@ -1,8 +1,8 @@
 package com.sprhib.test;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +41,7 @@ public class LinkControllerTest {
 	
 	@Test
 	public void testIndexPage() throws Exception {
-		mockMvc.perform(get("/index.html"))
+		mockMvc.perform(get("/index"))
 			.andExpect(status().isOk())
 			.andExpect(view().name("home"));
 	}

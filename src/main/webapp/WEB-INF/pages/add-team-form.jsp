@@ -14,7 +14,7 @@
 <body>
 <h1>Add team page</h1>
 <p>Here you can add a new team.</p>
-<form:form method="POST" commandName="team" action="${pageContext.request.contextPath}/team/add.html">
+<form:form method="POST" commandName="team" action="${pageContext.request.contextPath}/team/add">
 <table>
 <tbody>
 	<tr>
@@ -26,6 +26,10 @@
 		<td><form:input path="rating" /></td>
 	</tr>
 	<tr>
+		<td>Date:</td>
+		<td><form:input path="date" /></td>
+	</tr>
+	<tr>
 		<td><input type="submit" value="Add" /></td>
 		<td></td>
 	</tr>
@@ -33,6 +37,8 @@
 </table>
 </form:form>
 
-<p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p>
+<p><a href="${pageContext.request.contextPath}/index">Home page</a><br />
+<a href="${pageContext.request.contextPath}/team/list">Team list</a><br />
+</p>
 </body>
 </html>

@@ -1,5 +1,7 @@
 package com.sprhib.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +18,8 @@ public class Team {
 	private String name;
 	
 	private Integer rating;
+	
+	private Date date;
 	
 	public Integer getId() {
 		return id;
@@ -35,5 +39,18 @@ public class Team {
 	public void setRating(Integer rating) {
 		this.rating = rating;
 	}
+	/**
+	 * @return the date
+	 */
+	public Date getDate() {
+		return date;
+	}
+	/**
+	 * @param date the date to set
+	 */
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
 
 }

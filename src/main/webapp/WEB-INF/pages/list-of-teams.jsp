@@ -16,7 +16,7 @@
 <table border="1px" cellpadding="0" cellspacing="0" >
 <thead>
 <tr>
-<th width="10%">id</th><th width="15%">name</th><th width="10%">rating</th><th width="10%">actions</th>
+<th width="10%">id</th><th width="10%">name</th><th width="10%">rating</th><th width="10%">date</th><th width="10%">actions</th>
 </tr>
 </thead>
 <tbody>
@@ -25,16 +25,17 @@
 	<td>${team.id}</td>
 	<td>${team.name}</td>
 	<td>${team.rating}</td>
+	<td>${team.date}</td>
 	<td>
-	<a href="${pageContext.request.contextPath}/team/edit/${team.id}.html">Edit</a><br/>
-	<a href="${pageContext.request.contextPath}/team/delete/${team.id}.html">Delete</a><br/>
+	<a href="${pageContext.request.contextPath}/team/edit/${team.id}">Edit</a><br/>
+	<a href="${pageContext.request.contextPath}/team/delete/${team.id}">Delete</a><br/>
 	</td>
 </tr>
 </c:forEach>
 </tbody>
 </table>
 
-<p><a href="${pageContext.request.contextPath}/index.html">Home page</a></p>
+<p><a href="${pageContext.request.contextPath}/index">Home page</a></p>
 
 </body>
 </html>
